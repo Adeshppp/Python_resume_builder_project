@@ -24,18 +24,24 @@ document.add_paragraph(name + ' | ' + phone + ' | '+ email)
 
 document.add_heading('About Me')
 about_me = input('Tell me about yourself? ')
+speak('Tell me about yourself')
 document.add_paragraph(about_me)
 
 
 # work Experiences
 
 document.add_heading('Work Experience')
+speak('do you have any Work Experience, if yes then enter otherwise press enter')
+
 p = document.add_paragraph()
+
 company = input('Enter name of the Company')
 from_date= input('From date :')
 to_date=input('to_date : ')
 p.add_run(company + ' ').bold =True
 p.add_run(from_date + '-'+ to_date+'\n').italic= True
+speak('Describe your experience at '+ company)
+
 experience_details=input('Describe your experience at '+ company)
 p.add_run(experience_details)
 
